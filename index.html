@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="This is a Grocery shopping site which is responive in nature." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”robots” content="index, follow">
+    <title>Sabka_bazar</title>
+</head>
+
+<body onload="showCategory()">
+    <header class="header">
+        <div class="header-logo">
+            <a href="#" title="Sabka Bazar"><img src="./static/images/logo.png" alt="Logo"></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" title="Home Page">Home</a></li>
+                <li><a href="./pages/productPage.html" title="Go to products page">Products</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="header-right-upper">
+                <ul>
+                    <li><a href="./pages/login.html" title="login here">SignIn</a></li>
+                    <li><a href="./pages/register.html" title="register here">Register</a></li>
+                </ul>
+            </div>
+            <button class="header-right-lower" onclick="callModel()">
+                <ion-icon name="cart-sharp" size="large"></ion-icon>
+                <p class="cart" title="Your cart"> <span>0</span> items</p>
+            </button>
+        </div>
+    </header>
+    <main class="main-section">
+        <div class="slideshow-container">
+            <button class="pause-outline" onclick="stopShowSlides()">Stop</button>
+            <div class="mySlides fade">
+                <img src="./static/images/offers/offer1.jpg" alt="offer1.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./static/images/offers/offer2.jpg" alt="offer2.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./static/images/offers/offer3.jpg" alt="offer3.jpg">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Copyright @ 2011-2018 Sabka Bazaar Grocery Suplies Pvt. Ltd</p>
+    </footer>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <ion-icon name="trash-outline" class="trash" onclick="clearCart('iDs')"></ion-icon>
+            <div class="model-content-header">
+            
+            </div>
+            <div class="model-content-body">
+    
+            </div>
+            <div class="model-content-ad">
+                <div class="model-content-ad-left">
+                    <img src="../static/images/lowest-price.png" alt="lowest price">
+                </div>
+                <div class="model-content-ad-right">
+                    <p>You won't find it cheaper anywhere</p>
+                </div>
+            </div>
+            <div class="model-content-footer">
+                <span>Promo code can be applied on payment page.</span>
+                <button class="model-content-footer-button">
+                        <p>Proceed to Checkout</p>
+                        <span> Rs.187 </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 0,appliedInterval;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides")
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            appliedInterval  = setTimeout(showSlides, 3000);
+        }
+
+        function stopShowSlides(){
+            clearTimeout(appliedInterval)
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

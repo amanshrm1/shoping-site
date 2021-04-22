@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the register page.</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html" title="Sabka Bazar"><img src="../static/images/logo.png" alt="Logo"></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="../index.html" title="Home Page">Home</a></li>
+                <li><a href="./productPage.html" title="Go to products page">Products</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="header-right-upper">
+                <ul>
+                    <li><a href="./login.html" title="login here">SignIn</a></li>
+                    <li><a href="./register.html" title="register here">Register</a></li>
+                </ul>
+            </div>
+            <button class="header-right-lower">
+                <ion-icon name="cart-sharp" size="large"></ion-icon>
+                <p class="cart" title="Your cart"> <span>0</span> items</p>
+            </button>
+        </div>
+    </header>
+    <main class="login-section">
+        <div>
+            <h3>Signup</h3>
+            <p>We do not share your personal details with anyone.</p>
+        </div>
+        <form>
+            <label for="first-name"></label>
+            <input type="text" placeholder="First Name" id="first-name"><br>
+            <label for="last-name"></label>
+            <input type="text" placeholder="Last Name" id="last-name"><br>
+            <label for="email"></label>
+            <input type="email" placeholder="Email" id="email"><br>
+            <label for="password"></label>
+            <input type="text" placeholder="Password" id="password"><br>
+            <button>Signup</button>
+        </form>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

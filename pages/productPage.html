@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Grocery shopping site which is responive in nature." />
+    <meta name=”robots” content="index, nofollow">
+    <title>This is the product page.</title>
+</head>
+
+<body onload="showProducts()">
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html" title="Sabka Bazar"><img src="../static/images/logo.png" alt="Logo"></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="../index.html" title="Home Page">Home</a></li>
+                <li><a href="#" title="Go to products page">Products</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="header-right-upper">
+                <ul>
+                    <li><a href="./login.html" title="login here">SignIn</a></li>
+                    <li><a href="./register.html" title="register here">Register</a></li>
+                </ul>
+            </div>
+            <button class="header-right-lower" onclick="callModel()">
+                <ion-icon name="cart-sharp" size="large"></ion-icon>
+                <p class="cart" title="Your cart"> <span>0</span> items</p>
+            </button>
+        </div>
+    </header>
+    <div class="product-page-main">
+        <aside class="productPage-aside">
+            <div class="topnav">
+                <button class="topnav-buttons" onclick="filterSelection('5b6899953d1a866534f516e2')">Fruits & Vegetables</button>
+                <hr>
+                <div id="myLinks">
+                    <button class="topnav-buttons" onclick="filterSelection('5b6899123d1a866534f516de')">Beverages Cakes & Dairy</button>
+                    <hr>
+                    <button class="topnav-buttons" onclick="filterSelection('5b675e5e5936635728f9fc30')">Beverages</button>
+                    <hr>
+                    <button class="topnav-buttons" onclick="filterSelection('5b68994e3d1a866534f516df')">Beauty and Hygene</button>
+                    <hr>
+                    <button class="topnav-buttons" onclick="filterSelection('5b6899683d1a866534f516e0')">Body Care</button>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="arrow down"></i>
+                </a>
+            </div>
+        </aside>
+        <main class="productPage-section">
+            
+        </main>
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <ion-icon name="trash-outline" class="trash" onclick="clearCart('iDs')"></ion-icon>
+                <span class="close">&times;</span>
+                <div class="model-content-header">
+
+                </div>
+                <div class="model-content-body">
+
+                </div>
+                <div class="model-content-ad">
+                    <div class="model-content-ad-left">
+                        <img src="../static/images/lowest-price.png" alt="Lowest price">
+                    </div>
+                    <div class="model-content-ad-right">
+                        <p>You won't find it cheaper anywhere</p>
+                    </div>
+                </div>
+                <div class="model-content-footer">
+                    <span>Promo code can be applied on payment page.</span>
+                    <button class="model-content-footer-button">
+                            <p>Proceed to Checkout</p>
+                            <span> Rs.187 </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+$universal: #d6224c;
+$text-color: rgb(252, 252, 251);
+$background_color: #cecece;
+
+.product-page-main {
+  display: flex;
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
+.productPage-aside {
+  width: 22%;
+  background-color: $background_color;
+
+  ul li {
+    padding: 1.25em 0 0 0.625em;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav-buttons {
+  background-color: $background_color;
+  padding: 0.638em 0 0.638em 0.638em;
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  font-size: 0.813em;
+  display: block;
+
+  &.icon {
+    background: $text-color;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover {
+    background-color: $universal;
+    color: black;
+  }
+}
+
+.productPage-section {
+  font-size: 14px;
+  width: 78%;
+  position: relative;
+  padding-top: 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-element {
+  width: 22%;
+  margin: 0 0 7% 2%;
+  position: relative;
+  padding-bottom: 0.625em;
+  border-bottom: 1px dotted $background_color;
+}
+
+.product-heading-div {
+  height: 2.5em;
+
+  h3 {
+    font-size: 0.938em;
+    margin: 0 7px 13px 2px;
+  }
+}
+
+.product-img-div {
+  text-align: center;
+
+  img {
+    width: 70%;
+  }
+}
+
+.product-para-div {
+  width: 90%;
+  height: 4.553em;
+  overflow: hidden;
+  position: relative;
+  background-color: $background_color;
+  border-radius: 2px;
+  padding: 0.313em;
+
+  p {
+    font-size: 0.698em;
+  }
+}
+
+.product-footer {
+  display: flex;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.product-footer-price,
+.product-footer-button {
+  width: 50%;
+}
+.product-footer-price {
+  padding-top: 5%;
+}
+
+.product-footer-price span {
+  font-size: 0.65rem;
+}
+
+.product-element div button {
+  border: 0;
+  background-color: $universal;
+  border-radius: 0;
+  color: $text-color;
+  padding: 0.313em 0.625em;
+}
+
+@media only screen and (max-width: 768px) {
+  .productPage-section {
+    text-align: left;
+    margin-right: 1%;
+  }
+
+  .product-page-main {
+    width: 100%;
+  }
+
+  .product-img-div {
+    width: 50%;
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-para-div {
+    width: 49%;
+    margin-left: 1%;
+    float: left;
+    height: 9.313em;
+    font-size: 1em;
+    padding: 0.6em;
+  }
+
+  .product-footer-price {
+    display: none;
+  }
+
+  .product-footer-button {
+    width: 100%;
+  }
+
+  .product-element div button {
+    width: 100%;
+  }
+
+  .product-element div button::after {
+    content: " @ Rs.187";
+  }
+
+  .product-element {
+    width: 48%;
+  }
+
+  .footer p {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .productPage-section {
+    width: 100%;
+  }
+
+  .productPage-aside {
+    text-align: center;
+    width: 100%;
+    background-color: #d6224c;
+  }
+
+  .product-element {
+    width: 100%;
+    position: relative;
+  }
+
+  .product-para-div {
+    width: 45%;
+    height: 64%;
+    margin-left: 2%;
+  }
+
+  .product-footer-button {
+    width: 45%;
+    position: absolute;
+    right: 12px;
+    top: 190px;
+  }
+
+  .product-page-main {
+    flex-direction: column;
+  }
+
+  .modal {
+    padding-top: 70px;
+  }
+
+  .modal-content {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .close {
+    margin: 5px 15px 0 0;
+  }
+
+  .topnav {
+    button {
+      background-color: $universal;
+      color: $text-color;
+    }
+
+    a {
+      &.icon {
+        display: block;
+        background-color: $universal;
+        width: 15%;
+        height: 2.168em;
+      }
+    }
+
+    #myLinks {
+      display: none;
+    }
+  }
+
+  .model-content-footer-button div p {
+    font-size: medium;
+  }
+}
